@@ -1,18 +1,12 @@
 module.exports = function check(str, bracketsConfig) {
 
-  // const bracketsConfig = [['(', ')'], ['[', ']'], ['{', '}']];
-
   let handledStr = str;
 
-  // let handledStr = '[]][[]'
-
-  let brackets = [];
+  const brackets = [];
 
   bracketsConfig.forEach(bracket => {
     brackets.push(bracket.join(''))
   });
-
-  console.log(brackets);
 
   for (let i = 0; i < brackets.length;) {
     if (handledStr.includes(brackets[i])) {
